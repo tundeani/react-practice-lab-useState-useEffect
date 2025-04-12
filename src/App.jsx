@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Link } from 'react-router-dom'
+import counterApp from './projects/counter/counterApp'
+import fetchUserApp from  '/.projects/fetchUser/fetchUserApp' 
+import timerApp from './projects/timer/timerApp'
+import toggleDarkModeApp from './projects/toggleDarkMode'
+import weatherApp from './weatherApp'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function App () {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div style={{ padding: '20px'}}>
+      <nav>
+        <Link to= "/counter">Counter</Link>
+        <Link to= "/fetchUser">Fetch User</Link>
+        <Link to= "/timer">Timer</Link>
+        <Link to= "/toggleDarkMode">Toggle-Dark-Mode</Link>
+        <Link to= "/weatherApp">Weather-App</Link>
+      </nav>
 
-export default App
+      <Routes>
+        <Route path= "/counter" element= {<counterApp />} />
+        <Route path= "/fetchUser" element= {< fetchUserApp />} />
+        <Route path= "/timer" element= {< timerApp />} />
+        <Route path= "/toggleDarkMode" element= {< toggleDarkModeApp />} />
+        <Route path= "/weatherApp" element= {< weatherApp />} />
+      </Routes>
+    </div>
+  )
+
+
+}

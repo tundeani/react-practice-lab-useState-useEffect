@@ -24,6 +24,7 @@ function App () {
         <Route path= "/timer" element= {< TimerApp />} />
         <Route path= "/toggleDarkMode" element= {< ToggleDarkModeApp />} />
         <Route path= "/weatherApp" element= {< WeatherApp />} />
+        <Route path="/" element={<Component />} />
       </Routes>
     </div>
   )

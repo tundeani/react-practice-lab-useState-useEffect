@@ -5,12 +5,12 @@ export default function TimerApp() {
   const [ isRunning, setIsRunning ] = useState(false);
 
   useEffect(() => {
-    let interval = (null);
+    let interval = null;
 
     if (isRunning) {
       // Increase time every second when running
       interval = setInterval(() => {
-        setSeconds(prev = prev + 1);
+        setSeconds(prev => prev + 1);
       }, 1000);
     } else if (!isRunning && seconds !==0) {
       // clear interval if not running
@@ -25,9 +25,9 @@ export default function TimerApp() {
     <div>
       <h2>Timer App</h2>
       <p>Timer: {seconds} seconds</p>
-      <button onclick={() => setIsRunning(true)}>Start</button>
-      <button onclick={() => setIsRunning(false)}>Pause</button>
-      <button onclick={() => {setIsRunning(false); seconds(0)} }>Reset</button>
+      <button onClick={() => setIsRunning(true)}>Start</button>
+      <button onClick={() => setIsRunning(false)}>Pause</button>
+      <button onClick={() => {setIsRunning(false); setSeconds(0)} }>Reset</button>
     </div>
   )
 }

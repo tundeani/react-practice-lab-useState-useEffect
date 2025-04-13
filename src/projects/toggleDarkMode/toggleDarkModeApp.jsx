@@ -19,7 +19,7 @@ export default function ToggleDarkMode() {
     <div style= {containerStyle}>
       <h2>Toggle Dark Mode App</h2>
       <p>The Current Theme is { darkMode ? 'Dark' : 'Light'}. </p>
-      <button>
+      <button onClick= {toggleDarkMode}>
         Toggle to { darkMode ? 'Light' : 'Dark'} Mode
       </button>
     </div>

@@ -1,0 +1,51 @@
+.counter-container {
+  text-align: center;
+  padding: 40px;
+  background: #e0f2fe;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.count-display {
+  font-size: 3rem;
+  color: #0f172a;
+  margin: 20px 0;
+}
+
+.button-group button {
+  margin: 0 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #0284c7;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button-group button:hover {
+  background: #0369a1;
+}
+
+@media screen and (max-width: 600px) {
+  .counter-container {
+    width: 90%;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .counter-container button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  .counter-container h2 {
+    font-size: 1.4rem;
+  }
+}

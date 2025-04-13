@@ -1,0 +1,60 @@
+/* TimerApp.css */
+
+.timer-container {
+  text-align: center;
+  background-color: #fefce8;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timer-container h2 {
+  color: #78350f;
+  margin-bottom: 20px;
+}
+
+.timer-container p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ca8a04;
+  margin-bottom: 30px;
+}
+
+.timer-container button {
+  background-color: #facc15;
+  color: #78350f;
+  border: none;
+  padding: 12px 20px;
+  margin: 0 8px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.timer-container button:hover {
+  background-color: #fde047;
+}
+
+@media screen and (max-width: 600px) {
+  .timer-container {
+    width: 90%;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .timer-container button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  .timer-container p {
+    font-size: 1.2rem;
+  }
+}
+

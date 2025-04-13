@@ -1,0 +1,62 @@
+/* FetchUserApp.css */
+
+.fetch-container {
+  text-align: center;
+  background-color: #f0f9ff;
+  padding: 40px;
+  max-width: 400px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fetch-container h2 {
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.fetch-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #38bdf8;
+  margin-bottom: 20px;
+}
+
+.fetch-container p {
+  margin: 8px 0;
+  color: #334155;
+  font-size: 1rem;
+}
+
+.fetch-container p:nth-child(odd) {
+  font-weight: 500;
+}
+
+.loading,
+.error {
+  text-align: center;
+  color: #1e40af;
+  font-size: 1.2rem;
+  margin-top: 60px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .fetch-user-container {
+    width: 90%;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .fetch-user-container img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .fetch-user-container p {
+    word-wrap: break-word;
+    text-align: center;
+  }
+}

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import './FetchUserApp.css';
+
 
 export default function FetchUserApp() {
   const [ user, setUser ] = useState(null);
@@ -26,11 +28,12 @@ export default function FetchUserApp() {
     fetchUser();        // call fetchuser function
   }, []);               //useEffect runs once with []
   
-  if (loading) return <p>Loading User......</p>;
-  if (error) return <p>{error}</p>;
+  if (loading) return <p className="loading">Loading User...</p>;
+  if (error) return <p className="error">{error}</p>;
+
 
   return(
-    <div>
+    <div className="fetch-container">
       <h2>Fetch User App</h2>
       <img src= {user.picture.large} alt="User Profile" style={{borderRadius: '50%'}} />
       <p>Name: {user.name.first} {user.name.last}</p>

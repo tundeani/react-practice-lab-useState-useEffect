@@ -1,0 +1,64 @@
+/* ToggleDarkModeApp.css */
+
+.toggle-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.toggle-container.light {
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+.toggle-container.dark {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.toggle-container h2 {
+  margin-bottom: 20px;
+}
+
+.toggle-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.toggle-container button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #6366f1;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-container button:hover {
+  background-color: #4f46e5;
+}
+
+@media screen and (max-width: 600px) {
+  .toggle-container {
+    width: 90%;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .toggle-container button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .toggle-container h2 {
+    font-size: 1.4rem;
+  }
+}

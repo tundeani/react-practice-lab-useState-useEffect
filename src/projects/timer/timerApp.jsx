@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './TimerApp.css';
 
 export default function TimerApp() {
   const [seconds, setSeconds ] = useState(0);
@@ -22,7 +23,7 @@ export default function TimerApp() {
   }, [isRunning, seconds]);
 
   return (
-    <div>
+    <div className="timer-container">
       <h2>Timer App</h2>
       <p>Timer: {seconds} seconds</p>
       <button onClick={() => setIsRunning(true)}>Start</button>

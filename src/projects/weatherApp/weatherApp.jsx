@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './WeatherApp.css'; // Import the CSS
 
 export default function WeatherApp() {
   const [city, setCity] = useState('');
@@ -6,7 +7,7 @@ export default function WeatherApp() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const API_KEY = '76bbbcfab33d8924d7ccb60f18db0880'; // Replace with your OpenWeatherMap API key
+  const API_KEY = '76bbbcfab33d8924d7ccb60f18db0880';
 
   const fetchWeather = async (e) => {
     e.preventDefault();
@@ -32,7 +33,7 @@ export default function WeatherApp() {
   };
 
   return (
-    <div>
+    <div className="weather-container">
       <h2>Weather App</h2>
       <form onSubmit={fetchWeather}>
         <input 
@@ -44,14 +45,12 @@ export default function WeatherApp() {
         <button type="submit">Get Weather</button>
       </form>
 
-      {loading && <p>Loading weather...</p>}
-      {error && <p>Error: {error}</p>}
+      {loading && <p className="loading">Loading weather...</p>}
+      {error && <p className="error">Error: {error}</p>}
       
       {weather && (
         <div>
-          <p>
-            {weather.name} - {weather.sys.country}
-          </p>
+          <p>{weather.name} - {weather.sys.country}</p>
           <p>Temperature: {weather.main.temp}°C</p>
           <p>Weather: {weather.weather[0].description}</p>
         </div>

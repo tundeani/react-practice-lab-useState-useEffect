@@ -1,9 +1,9 @@
 import { Routes, Route, Link } from 'react-router-dom'
-import counterApp from './projects/counter/counterApp'
-import fetchUserApp from  '/.projects/fetchUser/fetchUserApp' 
-import timerApp from './projects/timer/timerApp'
-import toggleDarkModeApp from './projects/toggleDarkMode'
-import weatherApp from './weatherApp'
+import CounterApp from './projects/counter/CounterApp'
+import FetchUserApp from './projects/fetchUser/FetchUserApp' 
+import TimerApp from './projects/timer/TimerApp'
+import ToggleDarkModeApp from './projects/toggleDarkMode/ToggleDarkModeApp'
+import WeatherApp from './projects/weatherApp/WeatherApp'
 
 function App () {
   return (
@@ -17,14 +17,16 @@ function App () {
       </nav>
 
       <Routes>
-        <Route path= "/counter" element= {<counterApp />} />
-        <Route path= "/fetchUser" element= {< fetchUserApp />} />
-        <Route path= "/timer" element= {< timerApp />} />
-        <Route path= "/toggleDarkMode" element= {< toggleDarkModeApp />} />
-        <Route path= "/weatherApp" element= {< weatherApp />} />
+        <Route path= "/counter" element= {<CounterApp />} />
+        <Route path= "/fetchUser" element= {< FetchUserApp />} />
+        <Route path= "/timer" element= {< TimerApp />} />
+        <Route path= "/toggleDarkMode" element= {< ToggleDarkModeApp />} />
+        <Route path= "/weatherApp" element= {< WeatherApp />} />
       </Routes>
     </div>
   )
 
 
 }
+
+export default App;

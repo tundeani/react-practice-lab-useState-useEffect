@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
-export default function counterApp () {
+export default function CounterApp () {
   const [ count, setCount ] = useState(0);
 
   return (
     <div>
-      <h1>Counter App</h1>
+      <h2>Counter App</h2>
       <p>count</p>
       <button onclick={() => setCount(count + 1)}>Increase</button>
       <button onclick={() => setCount(count - 1)}>Decrease</button>

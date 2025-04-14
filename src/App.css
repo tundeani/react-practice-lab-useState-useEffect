@@ -14,7 +14,8 @@ body, html {
 body {
   display: flex;
   justify-content: center;
-  align-items: center;height: fit-content;
+  align-items: center;
+  height: fit-content;
 }
 
 .home-content {

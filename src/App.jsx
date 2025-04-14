@@ -19,7 +19,7 @@ function App () {
   return (
     <div className="app-container">
       <h1 className="app-title">React Projects Playground</h1>
-      
+      <p className="home-content">Vol1: useState - useEffect</p>
       <nav className="projects-list">
         <Link to="/" className="project-link">Home</Link>
         <Link to="/counter" className="project-link">Counter</Link>

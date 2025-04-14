@@ -17,6 +17,13 @@ body {
   align-items: center;height: fit-content;
 }
 
+.home-content {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
 .app-container {
   text-align: center;
   padding: 40px 20px;
